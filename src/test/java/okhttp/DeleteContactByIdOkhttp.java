@@ -78,6 +78,7 @@ public class DeleteContactByIdOkhttp extends BaseOkhttp {
         Assert.assertEquals(response.code(), 401);
         ErrorDTO errorDTO = gson.fromJson(response.body().string(), ErrorDTO.class);
         Assert.assertEquals(errorDTO.getError(), "Unauthorized");
+        System.out.println("===="+errorDTO.getMessage());
 
     }
 
